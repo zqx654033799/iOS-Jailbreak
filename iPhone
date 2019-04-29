@@ -1,0 +1,39 @@
+#!/bin/bash
+
+if [ "$1"x = "app"x ]; then
+for apps in /var/mobile/Containers/Data/Application/*; do
+if [ -d "$apps" ];then
+
+for preference in $apps/Library/Preferences/*; do
+if [ -f "$preference" ];then
+if [[ $preference =~ "plist" ]];then
+echo "$preference";
+fi
+fi
+done
+
+fi
+done
+elif [ "$1"x = "appShared"x ]; then
+for apps in /var/mobile/Containers/Shared/AppGroup/*; do
+if [ -d "$apps" ];then
+
+for preference in $apps/Library/Preferences/*; do
+if [ -f "$preference" ];then
+if [[ $preference =~ "plist" ]];then
+echo "$preference";
+fi
+fi
+done
+
+fi
+done
+elif [ "$1"x = "clearn"x ]; then
+echo 'cat /dev/null > ~/.bash_history && history -c && exit'
+elif [ "$1"x = "removeCrash"x ]; then
+rm -rf /var/mobile/Library/Logs/CrashReporter/
+elif [ "$1"x = "removeiTunesWiFiSync"x ]; then
+rm -rf /var/mobile/Library/Preferences/com.apple.atc.plist
+else
+echo -e 'usage: \n\tapp\n\tappShared\n\tclearn\n\tremoveCrash\n\tremoveiTunesWiFiSync'
+fi
