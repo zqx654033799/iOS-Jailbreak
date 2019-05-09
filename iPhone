@@ -28,12 +28,12 @@ done
 
 fi
 done
-elif [ "$1"x = "clearn"x ]; then
+elif [ "$1"x = "clean"x ]; then
 echo 'cat /dev/null > ~/.bash_history && history -c && exit'
 elif [ "$1"x = "removeCrash"x ]; then
 rm -rf /var/mobile/Library/Logs/CrashReporter/
 elif [ "$1"x = "removeiTunesWiFiSync"x ]; then
 rm -rf /var/mobile/Library/Preferences/com.apple.atc.plist
 else
-echo -e 'usage: \n\tapp\n\tappShared\n\tclearn\n\tremoveCrash\n\tremoveiTunesWiFiSync'
+echo -e 'usage: \n\tapp\n\tappShared\n\tclean\n\tremoveCrash\n\tremoveiTunesWiFiSync'
 fi
