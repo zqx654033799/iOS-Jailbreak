@@ -8,6 +8,16 @@
 
     brew install dpkg ldid
 
+## 安装 chisel
+
+    brew install chise
+**安装完成后最后出现一个安装目录，类似**
+
+    command script import /usr/local/opt/chisel/libexec/fblldb.py
+**编辑~/.lldbinit文件，将文本粘上**
+
+    vi ~/.lldbinit
+
 ## 安装 Theos
 
     sudo Git clone --recursive https://github.com/theos/theos.git /opt/theos
@@ -24,7 +34,6 @@
     git clone https://github.com/AloneMonkey/MonkeyDev.git ~/
     cd ~/MonkeyDev/bin
     sudo ./md-install
-
 **卸载**
 
     sudo ./md-uninstall
