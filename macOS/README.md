@@ -28,3 +28,7 @@
 **卸载**
 
     sudo ./md-uninstall
+
+## 选择指定的Xcode
+
+    sudo xcode-select -s /Applications/Xcode.app/
