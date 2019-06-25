@@ -18,6 +18,15 @@
 
     vi ~/.lldbinit
 
+## 安装 restore-symbol
+
+    git clone --recursive https://github.com/tobefuturer/restore-symbol.git ~/
+    cd ~/restore-symbol && make
+    ./restore-symbol
+**输出带符号的新mach-o文件**
+
+    ./restore-symbol /pathto/origin_mach_o_file -o /pathto/mach_o_with_symbol
+
 ## 安装 Theos
 
     sudo Git clone --recursive https://github.com/theos/theos.git /opt/theos
