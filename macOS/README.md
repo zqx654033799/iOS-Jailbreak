@@ -10,7 +10,7 @@
 
 ## 安装 chisel
 
-    brew install chise
+    brew install chisel
 **安装完成后最后出现一个安装目录，类似**
 
     command script import /usr/local/opt/chisel/libexec/fblldb.py
